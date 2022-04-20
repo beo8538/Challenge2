@@ -7,7 +7,8 @@ public class carMove : MonoBehaviour
 {
     public Rigidbody rb;
     public Transform car;
-    public float speed = 5;
+    public float speed = 10;
+    public float speedUp = 20;
 
     Vector3 rotationRight = new Vector3(0, 30, 0);
     Vector3 rotationLeft = new Vector3(0, -30, 0);
@@ -30,7 +31,7 @@ public class carMove : MonoBehaviour
     private void FixedUpdate()
     {
         //car move itself
-            rb.AddForce(forward * speed * Time.deltaTime);
+        transform.Translate(forward * speed * Time.deltaTime);
         
         if (Input.GetKey("s"))
         {
@@ -47,6 +48,11 @@ public class carMove : MonoBehaviour
         {
             Quaternion deltaRotationLeft = Quaternion.Euler(rotationLeft * Time.deltaTime);
             rb.MoveRotation(rb.rotation * deltaRotationLeft);
+        }
+
+        if (Input.GetKey("Space"))
+        {
+            transform.Translate(forward * speedUp * Time.deltaTime);
         }
     }
 }
