@@ -20,7 +20,9 @@ public class CarRotation : MonoBehaviour
     public void OnPointerEnter() //maybe switch it back to Update()
     {
         //Output to see if this works
-        Debug.Log("Cursor on " + name + " GameObject");
+        Debug.Log("Cursor on " + name + " GameObject"); //double check that cursor is on car
+
+        //if()
 
         transform.Rotate(rotation * speed * Time.deltaTime); //manages the speed that the object is rotating
     }
