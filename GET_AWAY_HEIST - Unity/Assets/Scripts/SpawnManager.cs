@@ -4,15 +4,18 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    // Start is called before the first frame update
+    RoadGenerator roadGenerator;
     void Start()
     {
-        
+        roadGenerator = GetComponent<RoadGenerator>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         
+    }
+    public void SpawnTriggerEnter()
+    {
+        roadGenerator.MoveRoad();
     }
 }
