@@ -1002,7 +1002,7 @@ MonoBehaviour:
   Player: {fileID: 45602723}
   MoveSpeed: 10.2
   MaxDist: 10
-  MinDist: 0
+  MinDist: 2
 --- !u!1 &1775683192
 GameObject:
   m_ObjectHideFlags: 0
