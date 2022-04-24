@@ -15,14 +15,25 @@ public class basicmovement : MonoBehaviour
         // is the controller on the ground?
         if (controller.isGrounded)
         {
+            // theRb.AddForce(transform.forward * forwardAccel * 1000f);
+            //rigidbody.addForce(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical") ).normilized * speed);
+
             //Feed moveDirection with input.
             moveDirection = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
             moveDirection = transform.TransformDirection(moveDirection);
             //Multiply it by speed.
             moveDirection *= speed;
+
+            
+
             //Jumping
             if (Input.GetButton("Jump"))
                 moveDirection.y = jumpSpeed;
+
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                moveDirection *= speed + 10f;
+            }
 
         }
         //Applying gravity to the controller
