@@ -5,6 +5,7 @@ using UnityEngine;
 public class basicmovement : MonoBehaviour
 { //Variables
     public float speed = 15.0F;
+    public float speedUp = 30f;
     public float jumpSpeed = 8.0F;
     public float gravity = 20.0F;
     private Vector3 moveDirection = Vector3.zero;
@@ -30,9 +31,9 @@ public class basicmovement : MonoBehaviour
             if (Input.GetButton("Jump"))
                 moveDirection.y = jumpSpeed;
 
-            if (Input.GetKeyDown(KeyCode.LeftShift))
+            if (Input.GetKeyDown(KeyCode.LeftShift)) //speed up
             {
-                moveDirection *= speed + 10f;
+                moveDirection *= speed + speedUp; 
             }
 
         }
@@ -41,6 +42,8 @@ public class basicmovement : MonoBehaviour
         //Making the character move
         controller.Move(moveDirection * Time.deltaTime);
     }
+
+   
 
     private void OnTriggerEnter(Collider other)
     {
