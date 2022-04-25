@@ -10,13 +10,14 @@ public class basicmovement : MonoBehaviour
     public float gravity = 20.0F;
     private Vector3 moveDirection = Vector3.zero;
     public SpawnManager spawnManager;
+    public FuelSystem GetFuelSystem;
     void Update()
     {
         CharacterController controller = GetComponent<CharacterController>();
         // is the controller on the ground?
         if (controller.isGrounded)
         {
-            // theRb.AddForce(transform.forward * forwardAccel * 1000f);
+            //theRb.AddForce(transform.forward * forwardAccel * 1000f);
             //rigidbody.addForce(new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical") ).normilized * speed);
 
             //Feed moveDirection with input.
@@ -33,7 +34,8 @@ public class basicmovement : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.LeftShift)) //speed up
             {
-                moveDirection *= speed + speedUp; 
+               moveDirection *= speed + speedUp;
+               
             }
 
         }
@@ -48,5 +50,13 @@ public class basicmovement : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         spawnManager.SpawnTriggerEnter();
+    }
+
+    public void carStop()
+    {
+       // SetGameState(GameState.GameOver);//set the game state to Game Over
+
+       // SceneManager.LoadScene(gameOverScene); //load the game over scene
+
     }
 }
