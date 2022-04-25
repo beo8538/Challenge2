@@ -8,11 +8,13 @@
  * Description: Basic GameManager Template
 ****/
 
+/*** Using Namespaces ***/
+using System; //C# library for system properties
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
+using UnityEngine.SceneManagement; //libraries for accessing scenes
+using UnityEngine.UI;
 
 //Setting the enum outside the class allows for direct access by the enum (classes) name directly in other classes.
 public enum GameState { Title, Playing, BeatLevel, LostLevel, GameOver, Idle, Testing };
@@ -76,6 +78,10 @@ public class GameManager : MonoBehaviour
     static public int lives; // number of lives for player 
     public int Lives { get { return lives; } set { lives = value; } }//access to static variable lives [get/set methods]
 
+    private GameObject player; //player in game
+
+    public Text uiDistance; //text that displays the distance player moves
+
     static public int score;  //score value
     public int Score { get { return score; } set { score = value; } }//access to static variable score [get/set methods]
 
@@ -85,7 +91,7 @@ public class GameManager : MonoBehaviour
 
     [Space(10)]
     public string defaultEndMessage = "Game Over";//the end screen message, depends on winning outcome
-    public string loseMessage = "You Lose"; //Message if player loses
+    public string loseMessage = "You Lose"; //Message if player looses
     public string winMessage = "You Win"; //Message if player wins
     [HideInInspector] public string endMsg;//the end screen message, depends on winning outcome
 
@@ -95,9 +101,6 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("Name of the game over scene")]
     public string gameOverScene;
-
-    [Tooltip("Name of the credits scene")]
-    public string creditsScene;
 
     [Tooltip("Count and name of each Game Level (scene)")]
     public string[] gameLevels; //names of levels
@@ -118,7 +121,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] //Access to private variables in editor
     public bool nextLevel = false; //test for next level
 
-    //Win/Lose conditon
+    //Win/Loose conditon
     [SerializeField] //Access to private variables in editor
     private bool playerWon = false;
 
@@ -146,6 +149,8 @@ public class GameManager : MonoBehaviour
     //Start is called once before the update
     void Start()
     {
+        player = GameObject.Find("Player"); //finds the player in the game level
+
         /**check if background music exists**/
         if (backgroundMusicClip != null)
         {
@@ -166,6 +171,9 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
+        int distance = Mathf.RoundToInt(player.transform.position.z); //finds the distance player travels
+        uiDistance.text = distance.ToString() + "meters"; //shows distance on text
+
         //if ESC is pressed , exit game
         if (Input.GetKey("escape")) { ExitGame(); }
 
@@ -242,7 +250,6 @@ public class GameManager : MonoBehaviour
         SetDefaultGameStats(); // the game stats defaults 
 
     }//end StartGame()
-
 
     public void SetDefaultGameStats()
     {

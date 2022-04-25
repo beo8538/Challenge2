@@ -14,7 +14,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI; //libraries for UI components
 
-public class EndCanvas : MonoBehaviour
+public class EndMenu : MonoBehaviour
 {
     /*** VARIABLES ***/
 
