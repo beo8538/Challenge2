@@ -78,9 +78,7 @@ public class GameManager : MonoBehaviour
     static public int lives; // number of lives for player 
     public int Lives { get { return lives; } set { lives = value; } }//access to static variable lives [get/set methods]
 
-    private GameObject player; //player in game
-
-    public Text uiDistance; //text that displays the distance player moves
+    public Transform player; // get position of player
 
     static public int score;  //score value
     public int Score { get { return score; } set { score = value; } }//access to static variable score [get/set methods]
@@ -149,7 +147,7 @@ public class GameManager : MonoBehaviour
     //Start is called once before the update
     void Start()
     {
-        player = GameObject.Find("Player"); //finds the player in the game level
+        Debug.Log(player.position.z); //how many units we move on Z
 
         /**check if background music exists**/
         if (backgroundMusicClip != null)
@@ -171,9 +169,6 @@ public class GameManager : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        int distance = Mathf.RoundToInt(player.transform.position.z); //finds the distance player travels
-        uiDistance.text = distance.ToString() + "meters"; //shows distance on text
-
         //if ESC is pressed , exit game
         if (Input.GetKey("escape")) { ExitGame(); }
 
