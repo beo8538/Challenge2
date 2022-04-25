@@ -1,3 +1,13 @@
+/***
+ * Created by: Betzaida Ortiz Rivas
+ * Created on: 4/19/2022
+ * 
+ * Edited by:
+ * Edited on: 4/24/2022
+ * 
+ * Description: Spawns Enemies (civilian cars) that player must avoid
+***/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -38,14 +48,12 @@ public class spawner : MonoBehaviour
 
         //Set the initial position
         Vector3 pos = Vector3.zero;
-        float xMin = -bndCheck.camWidth + enemyPadding;
-        float xMax = bndCheck.camWidth - enemyPadding;
+        float xMin = -12 + enemyPadding;
+        float xMax = 12 - enemyPadding;
 
         pos.x = Random.Range(xMin, xMax);
-        pos.y = bndCheck.camHeight + enemyPadding;
-
-        pos.x = Random.Range(xMin, xMax); //range between the xmin and xmax
-        pos.y = bndCheck.camHeight + enemyPadding; // height plus padding, off
+        pos.z = this.transform.position.z;
+        pos.y = this.transform.position.y + enemyPadding;
 
         go.transform.position = pos;
 

@@ -7,16 +7,16 @@ public class BoundsCheck : MonoBehaviour
     /*** VARIABLES ***/
     [Header("Bounds Settings")]
     public float radius = 1f;//the radius around the object to keep on screen
-public bool keepOnScreen = true; //does the object need to stay on screen
+    public bool keepOnScreen = true; //does the object need to stay on screen
 
-[HideInInspector]
-public bool isOnScreen = true; //is the object on screen 
-[HideInInspector]
-public bool offLeft, offRight, offUp, offDown; //checks for where the object is off screen
-[HideInInspector]
-public float camWidth; //gets the width of the camera
-[HideInInspector]
-public float camHeight; //gets the height of the camera
+    [HideInInspector]
+    public bool isOnScreen = true; //is the object on screen 
+    [HideInInspector]
+    public bool offLeft, offRight, offUp, offDown; //checks for where the object is off screen
+    [HideInInspector]
+    public float camWidth; //gets the width of the camera
+    [HideInInspector]
+    public float camHeight; //gets the height of the camera
 
 
 /*** MEHTODS ***/
