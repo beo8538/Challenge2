@@ -147,7 +147,7 @@ public class GameManager : MonoBehaviour
     //Start is called once before the update
     void Start()
     {
-        Debug.Log(player.position.z); //how many units we move on Z
+        
 
         /**check if background music exists**/
         if (backgroundMusicClip != null)
