@@ -48,14 +48,12 @@ public class spawner : MonoBehaviour
 
         //Set the initial position
         Vector3 pos = Vector3.zero;
-        float xMin = -bndCheck.camWidth + enemyPadding;
-        float xMax = bndCheck.camWidth - enemyPadding;
+        float xMin = -12 + enemyPadding;
+        float xMax = 12 - enemyPadding;
 
         pos.x = Random.Range(xMin, xMax);
-        pos.y = bndCheck.camHeight + enemyPadding;
-
-        pos.x = Random.Range(xMin, xMax); //range between the xmin and xmax
-        pos.y = bndCheck.camHeight + enemyPadding; // height plus padding, off
+        pos.z = this.transform.position.z;
+        pos.y = this.transform.position.y + enemyPadding;
 
         go.transform.position = pos;
 
