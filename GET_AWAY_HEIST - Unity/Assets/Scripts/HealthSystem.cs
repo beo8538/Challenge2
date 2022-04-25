@@ -1,3 +1,13 @@
+/**** 
+ * Created by: Yao Wang
+ * Date Created: 4/25/2022
+ * 
+ * Last Edited by: Yao Wang
+ * Last Edited: 
+ * 
+ * Description: Health System 
+****/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
