@@ -3,9 +3,9 @@
  * Created on: 4/19/2022
  * 
  * Edited by:
- * Edited on:
+ * Edited on: 4/24/2022
  * 
- * Description: This thing should rotate car when mouse is hovering over it?
+ * Description: This rotates car in selection screen
 ***/
 using System.Collections;
 using System.Collections.Generic;
@@ -15,15 +15,11 @@ public class CarRotation : MonoBehaviour
 {
     [SerializeField]
     private Vector3 rotation; //rotation for the car
+    [SerializeField]
     private float speed; //speed that the rotation is going at
 
-    public void OnPointerEnter() //maybe switch it back to Update()
+    void Update()
     {
-        //Output to see if this works
-        Debug.Log("Cursor on " + name + " GameObject"); //double check that cursor is on car
-
-        //if()
-
         transform.Rotate(rotation * speed * Time.deltaTime); //manages the speed that the object is rotating
     }
 }

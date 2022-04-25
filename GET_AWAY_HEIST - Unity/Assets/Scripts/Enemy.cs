@@ -1,3 +1,13 @@
+/***
+ * Created by: Cristian Misla
+ * Created on: 4/00/2022
+ * 
+ * Edited by:
+ * Edited on:
+ * 
+ * Description: Makes Enemy (cop car) follow player
+***/
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
