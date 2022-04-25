@@ -17,6 +17,7 @@ public class CarSelection : MonoBehaviour
     private int currCar;
     private void selectCar(int index)
     {
+        /*for loop to transition cars*/
         for(int i = 0; i < transform.childCount; i++)
         {
             transform.GetChild(i).gameObject.SetActive(i == index);

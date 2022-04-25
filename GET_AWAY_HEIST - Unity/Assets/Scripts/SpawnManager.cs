@@ -14,7 +14,7 @@ using UnityEngine;
 
 public class SpawnManager : MonoBehaviour
 {
-    RoadGenerator roadGenerator;
+    RoadGenerator roadGenerator; //Reference the generator
     private BoundsCheck bndCheck; //ref to bounds check component
     void Start()
     {
@@ -24,7 +24,7 @@ public class SpawnManager : MonoBehaviour
     }
     public void SpawnTriggerEnter()
     {
-        roadGenerator.MoveRoad();
+        roadGenerator.MoveRoad(); //when the player wents the invisible trigger, call the MoveRoad() script
 
-    }
+    }//edn SpawnTriggerEnter()
 }

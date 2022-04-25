@@ -26,12 +26,13 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        transform.LookAt(Player);
-        if (Vector3.Distance(transform.position, Player.position) >= MinDist)
-        {
-            transform.position += transform.forward * MoveSpeed * Time.deltaTime;
+        transform.LookAt(Player); //Makes Enemy target the player
 
-            if (Vector3.Distance(transform.position, Player.position) <= MaxDist)
+        if (Vector3.Distance(transform.position, Player.position) >= MinDist) //if the distance of the player and enemy is greater than the MinDist then...
+        {
+            transform.position += transform.forward * MoveSpeed * Time.deltaTime; //move the enemy towards the player
+
+            if (Vector3.Distance(transform.position, Player.position) <= MaxDist) //if the distance of the player and the enemy is less than the MaxDist then...
             {
                 
             }

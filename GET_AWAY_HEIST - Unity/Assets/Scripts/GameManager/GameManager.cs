@@ -3,7 +3,7 @@
  * Date Created: Feb 23, 2022
  * 
  * Last Edited by: Betzaida Ortiz Rivas
- * Last Edited: 4/20/2022
+ * Last Edited: 4/25/2022
  * 
  * Description: Basic GameManager Template
 ****/
@@ -85,7 +85,7 @@ public class GameManager : MonoBehaviour
 
     [Space(10)]
     public string defaultEndMessage = "Game Over";//the end screen message, depends on winning outcome
-    public string loseMessage = "You Lose"; //Message if player looses
+    public string loseMessage = "You Lose"; //Message if player loses
     public string winMessage = "You Win"; //Message if player wins
     [HideInInspector] public string endMsg;//the end screen message, depends on winning outcome
 
@@ -95,6 +95,9 @@ public class GameManager : MonoBehaviour
 
     [Tooltip("Name of the game over scene")]
     public string gameOverScene;
+
+    [Tooltip("Name of the credits scene")]
+    public string creditsScene;
 
     [Tooltip("Count and name of each Game Level (scene)")]
     public string[] gameLevels; //names of levels
@@ -115,7 +118,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] //Access to private variables in editor
     public bool nextLevel = false; //test for next level
 
-    //Win/Loose conditon
+    //Win/Lose conditon
     [SerializeField] //Access to private variables in editor
     private bool playerWon = false;
 
