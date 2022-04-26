@@ -14,9 +14,4 @@ public class DistanceScore : MonoBehaviour
     {
         scoreText.text = player.position.z.ToString("Distance: 0"); //how many units we move on Z
     }
-
-    internal string ToString(string v)
-    {
-        throw new NotImplementedException();
-    }
 }
