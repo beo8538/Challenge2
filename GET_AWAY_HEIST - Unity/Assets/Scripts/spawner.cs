@@ -48,8 +48,8 @@ public class spawner : MonoBehaviour
 
         //Set the initial position
         Vector3 pos = Vector3.zero;
-        float xMin = -12 + enemyPadding;
-        float xMax = 12 - enemyPadding;
+        float xMin = -4.5f + enemyPadding;
+        float xMax = 4.5f - enemyPadding;
 
         pos.x = Random.Range(xMin, xMax);
         pos.z = this.transform.position.z;
@@ -65,6 +65,6 @@ public class spawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+      
     }
 }

@@ -175,9 +175,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 10
+  speedUp: 30
   jumpSpeed: 8
   gravity: 20
   spawnManager: {fileID: 56332494}
+  GetFuelSystem: {fileID: 0}
 --- !u!143 &45602726
 CharacterController:
   m_ObjectHideFlags: 0
@@ -297,7 +299,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   prefabEnemies:
-  - {fileID: 7489415438189908498, guid: 551adf323e5c8224c890cbc3fd1452e6, type: 3}
+  - {fileID: 293261519683174331, guid: 551adf323e5c8224c890cbc3fd1452e6, type: 3}
   - {fileID: 7327543556233856458, guid: c478a870e1a79ef44afce556d8317f4b, type: 3}
   - {fileID: 994893462339637127, guid: 369a820ad73162b42b655ff5a2b3ecce, type: 3}
   - {fileID: 7355559671589338458, guid: 3d3127d66d0d3374389616b29616d1e3, type: 3}
@@ -398,6 +400,7 @@ GameObject:
   - component: {fileID: 217672290}
   - component: {fileID: 217672289}
   - component: {fileID: 217672288}
+  - component: {fileID: 217672291}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -463,13 +466,34 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 217672287}
-  m_LocalRotation: {x: 0.38268343, y: 0, z: 0, w: 0.92387956}
-  m_LocalPosition: {x: 0, y: 7, z: -8}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 16, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 45602723}
   m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 45, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &217672291
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 217672287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ffb50debec53a94e8aac830184be724, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  radius: 1
+  keepOnScreen: 0
+  isOnScreen: 1
+  offLeft: 0
+  offRight: 0
+  offUp: 0
+  offDown: 0
+  camWidth: 0
+  camHeight: 0
 --- !u!1 &324775723
 GameObject:
   m_ObjectHideFlags: 0

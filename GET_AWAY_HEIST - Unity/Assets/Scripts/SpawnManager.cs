@@ -27,4 +27,5 @@ public class SpawnManager : MonoBehaviour
         roadGenerator.MoveRoad(); //when the player wents the invisible trigger, call the MoveRoad() script
 
     }//edn SpawnTriggerEnter()
+
 }

@@ -35,13 +35,7 @@ public class basicmovement : MonoBehaviour
             moveDirection = transform.TransformDirection(moveDirection);
             //Multiply it by speed.
             moveDirection *= speed;
-
-            
-
-            //Jumping
-            if (Input.GetButton("Jump"))
-                moveDirection.y = jumpSpeed;
-
+           
             if (Input.GetKeyDown(KeyCode.LeftShift)) //speed up
             {
                moveDirection *= speed + speedUp;

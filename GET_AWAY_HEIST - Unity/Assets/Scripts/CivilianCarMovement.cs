@@ -21,7 +21,6 @@ public class CivilianCarMovement : MonoBehaviour
 
     [Header("Civilians Settings")]
     public float speed = 10f;
-
     private BoundsCheck bndCheck; //reference to bounds check component
 
     //method that acts as a field (property)
@@ -44,26 +43,29 @@ public class CivilianCarMovement : MonoBehaviour
     void Update()
     {
         //Call the Move Method
-
         Move();
 
         //Check if bounds check exists and the object is off the bottom of the screen
         if (bndCheck != null && bndCheck.offDown)
         {
             Destroy(gameObject); //destory the object
+        }//end Update()
+    }
 
-        }//end if(bndCheck != null && !bndCheck.offDown)
-
-
-    }//end Update()
-
-
+    void OnBecameInvisible()
+    {
+        Destroy(this.gameObject);
+    }
     //Virtual methods can be overridden by child instances
     public virtual void Move()
     {
         Vector3 temPos = pos; //temporary position
         temPos.z -= speed * Time.deltaTime; //temporary z position, moving forward
         pos = temPos; //position is equal to temporary position
+        if (pos.z <0)
+        {
+            Destroy(gameObject);
+        }
 
     } // end Move()
 
