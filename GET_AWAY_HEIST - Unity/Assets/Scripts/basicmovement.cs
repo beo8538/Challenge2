@@ -11,6 +11,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class basicmovement : MonoBehaviour
 { //Variables
@@ -36,11 +37,12 @@ public class basicmovement : MonoBehaviour
             //Multiply it by speed.
             moveDirection *= speed;
 
-            
+
 
             //Jumping
             if (Input.GetButton("Jump"))
-                moveDirection.y = jumpSpeed;
+                SceneManager.LoadScene("End Scene"); //load the game over scene
+                 //moveDirection.y = jumpSpeed;
 
             if (Input.GetKeyDown(KeyCode.LeftShift)) //speed up
             {

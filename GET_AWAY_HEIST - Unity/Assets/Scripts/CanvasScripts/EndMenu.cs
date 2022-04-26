@@ -19,9 +19,12 @@ public class EndMenu : MonoBehaviour
     /*** VARIABLES ***/
 
     GameManager gm; //reference to game manager
+    DistanceScore distance; //reference distance score
+    public Transform player;
 
     [Header("Canvas SETTINGS")]
-    public Text endMsgTextbox; //textbox for the title
+    public Text endMsgTextbox; //textbox for the end message
+    public Text distTextbox; //show distance results from game
 
     /*** MEHTODS ***/
 
@@ -33,6 +36,7 @@ public class EndMenu : MonoBehaviour
 
         //Set the Canvas text from GM reference
         endMsgTextbox.text = gm.endMsg;
+        distTextbox.text = player.position.z.ToString("Distance Total: 0");
 
     }
 

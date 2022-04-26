@@ -598,6 +598,7 @@ GameObject:
   - component: {fileID: 7828504121858754728}
   - component: {fileID: 6656897201244672087}
   - component: {fileID: 8259401617088807243}
+  - component: {fileID: -4591689546459327435}
   m_Layer: 0
   m_Name: ambulance
   m_TagString: Untagged
@@ -655,3 +656,16 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 118
   m_CollisionDetection: 0
+--- !u!65 &-4591689546459327435
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7489415438189908498}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2993376, y: 1.6271591, z: 3.2642865}
+  m_Center: {x: -0.00056675076, y: 0.8128519, z: -0.0048902035}

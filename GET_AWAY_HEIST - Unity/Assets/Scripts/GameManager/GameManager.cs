@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
     static public int lives; // number of lives for player 
     public int Lives { get { return lives; } set { lives = value; } }//access to static variable lives [get/set methods]
 
-    public Transform player; // get position of player
+    //public Transform player; // get position of player
 
     static public int score;  //score value
     public int Score { get { return score; } set { score = value; } }//access to static variable score [get/set methods]
@@ -89,8 +89,6 @@ public class GameManager : MonoBehaviour
 
     [Space(10)]
     public string defaultEndMessage = "Game Over";//the end screen message, depends on winning outcome
-    public string loseMessage = "You Lose"; //Message if player looses
-    public string winMessage = "You Win"; //Message if player wins
     [HideInInspector] public string endMsg;//the end screen message, depends on winning outcome
 
     [Header("SCENE SETTINGS")]
@@ -200,19 +198,6 @@ public class GameManager : MonoBehaviour
             case GameState.Playing:
                 //if testing
                 if (TestGameManager) { RunTests(); }
-                break;
-
-            case GameState.BeatLevel:
-                endMsg = winMessage; //set win message
-                Debug.Log("beat level");
-                NextLevel(); //check for the next level
-                break;
-
-            case GameState.LostLevel:
-                currentLives = defaultsLives; //reset current lives to default (inital) value
-
-                endMsg = loseMessage; //set loose message
-                GameOver(); //move to game over
                 break;
 
             case GameState.GameOver:

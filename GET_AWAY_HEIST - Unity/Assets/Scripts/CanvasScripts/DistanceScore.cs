@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,5 +13,10 @@ public class DistanceScore : MonoBehaviour
     void Update()
     {
         scoreText.text = player.position.z.ToString("Distance: 0"); //how many units we move on Z
+    }
+
+    internal string ToString(string v)
+    {
+        throw new NotImplementedException();
     }
 }
