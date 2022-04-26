@@ -12,6 +12,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -39,7 +40,7 @@ public class HealthSystem : MonoBehaviour
         {
             health = 0;
             Debug.Log("Game Over");
-            gm.GameOver(); //load end scene 
+             
         }
 
         if(onCollision.gameObject.tag == "CivilianCar") //hit by CivilianCars
