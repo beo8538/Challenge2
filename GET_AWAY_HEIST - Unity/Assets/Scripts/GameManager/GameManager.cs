@@ -274,7 +274,7 @@ public class GameManager : MonoBehaviour
     {
         SetGameState(GameState.GameOver);//set the game state to Game Over
 
-        SceneManager.LoadScene(gameOverScene); //load the game over scene
+        SceneManager.LoadScene("End Scene"); //load the game over scene
 
     }//end GameOver()
 

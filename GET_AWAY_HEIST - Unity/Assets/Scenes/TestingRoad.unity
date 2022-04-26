@@ -256,7 +256,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Distance: '
+  m_Text: 'Distance:'
 --- !u!222 &324775726
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -403,6 +403,23 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4186515641797027239, guid: db3797dad78a790408d1017aaa64c9d7, type: 3}
   m_PrefabInstance: {fileID: 682066018}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &805177493 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8961468857647301247, guid: 531372b91e8e666469263fcdf6211129, type: 3}
+  m_PrefabInstance: {fileID: 8114608722186730588}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &805177494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 805177493}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d542b34950acd2b4bbb6a2c848cd846f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &849869267
 PrefabInstance:
   m_ObjectHideFlags: 0
