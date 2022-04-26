@@ -35,7 +35,7 @@ public class EndMenu : MonoBehaviour
         Debug.Log(gm.endMsg);
 
         //Set the Canvas text from GM reference
-        endMsgTextbox.text = gm.endMsg;
+       // endMsgTextbox.text = gm.endMsg;
         distTextbox.text = player.position.z.ToString("Distance Total: 0");
 
     }

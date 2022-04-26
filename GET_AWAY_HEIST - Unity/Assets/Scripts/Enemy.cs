@@ -19,12 +19,12 @@ public class Enemy : MonoBehaviour
     public int MaxDist = 10;
     public int MinDist = 5;
 
-    public Rigidbody rb;
+    //public Rigidbody rb;
 
 
     void Start()
     {
-        rb.constraints = RigidbodyConstraints.FreezeAll; 
+       // rb.constraints = RigidbodyConstraints.FreezeAll; 
     }
 
     void LateUpdate()
