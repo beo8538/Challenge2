@@ -693,7 +693,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82e8fc7580535e0408ca16ed95f89455, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 8581143853451139269, guid: 531372b91e8e666469263fcdf6211129, type: 3}
   endMsgTextbox: {fileID: 0}
   distTextbox: {fileID: 1368837843}
 --- !u!1 &1127664378
@@ -943,7 +943,6 @@ GameObject:
   - component: {fileID: 1368837842}
   - component: {fileID: 1368837844}
   - component: {fileID: 1368837843}
-  - component: {fileID: 1368837845}
   m_Layer: 5
   m_Name: ScoreDisplay
   m_TagString: Untagged
@@ -1012,20 +1011,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1368837841}
   m_CullTransparentMesh: 1
---- !u!114 &1368837845
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1368837841}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 75d1f975c8060ac488f627b4ab5eb338, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  player: {fileID: 8581143853451139269, guid: 531372b91e8e666469263fcdf6211129, type: 3}
-  scoreText: {fileID: 1368837843}
 --- !u!1 &1566858332
 GameObject:
   m_ObjectHideFlags: 0
