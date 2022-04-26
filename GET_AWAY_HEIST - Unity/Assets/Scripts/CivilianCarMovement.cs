@@ -64,7 +64,10 @@ public class CivilianCarMovement : MonoBehaviour
         Vector3 temPos = pos; //temporary position
         temPos.z -= speed * Time.deltaTime; //temporary z position, moving forward
         pos = temPos; //position is equal to temporary position
-
+        if(pos.z < 0)
+        {
+            Destroy(gameObject);
+        }
     } // end Move()
 
 }
