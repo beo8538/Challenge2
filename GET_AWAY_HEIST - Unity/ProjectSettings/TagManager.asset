@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Enemy
   - SpawnTrigger
+  - Gas_Can
+  - CivilianCar
   layers:
   - Default
   - TransparentFX

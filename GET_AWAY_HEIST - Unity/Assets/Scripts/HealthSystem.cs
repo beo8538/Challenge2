@@ -3,7 +3,7 @@
  * Date Created: 4/25/2022
  * 
  * Last Edited by: Yao Wang
- * Last Edited: 
+ * Last Edited: 4/25/2022
  * 
  * Description: Health System 
 ****/
@@ -18,7 +18,9 @@ public class HealthSystem : MonoBehaviour
     public float health = 100f;
     public Text healthDisplay;
     public float damage = 10f;
-    // Start is called before the first frame update
+
+    GameManager gm; //gaem manager
+
     void Start()
     {
         
@@ -28,6 +30,24 @@ public class HealthSystem : MonoBehaviour
     void Update()
     {
         healthDisplay.text = "Health: " + health; //display the health level 
+
     }
-    
+
+    void HitByPolice(Collider onCollision) //to check car hit by the cars
+    {
+        if (onCollision.gameObject.tag == "Enemy") //if hit by police
+        {
+            health = 0;
+            Debug.Log("Game Over");
+            gm.GameOver(); //load end scene 
+        }
+
+        if(onCollision.gameObject.tag == "CivilianCar") //hit by CivilianCars
+        {
+            health -= 20f;
+            Debug.Log("Game Over" + health);
+        }
+
+        
+    }
 }
