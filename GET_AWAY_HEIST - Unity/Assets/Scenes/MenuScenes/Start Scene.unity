@@ -787,11 +787,8 @@ MonoBehaviour:
   defaultsLives: 0
   resetLostLevel: 0
   gameRestartDelay: 2
-  player: {fileID: 0}
-  backgroundMusicClip: {fileID: 0}
+  backgroundMusicClip: {fileID: 8300000, guid: 5bf6591a5deb5624a8c541f372128724, type: 3}
   defaultEndMessage: Game Over
-  loseMessage: You Lose
-  winMessage: You Win
   endMsg: 
   startScene: Start Scene
   gameOverScene: End Scene

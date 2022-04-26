@@ -19,12 +19,15 @@ public class Enemy : MonoBehaviour
     public int MaxDist = 10;
     public int MinDist = 5;
 
+    public Rigidbody rb;
+
+
     void Start()
     {
-
+        rb.constraints = RigidbodyConstraints.FreezeAll; 
     }
 
-    void Update()
+    void LateUpdate()
     {
         transform.LookAt(Player); //Makes Enemy target the player
 
